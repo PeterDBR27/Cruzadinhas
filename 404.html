@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2476428187308228"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <!-- AdSense -->
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    <meta
+      name="keywords"
+      content="lockpass, lock pass, lockpass jogo, lockpass game, lock pass jogo, lock pass game, LOCKPASS, LOCK PASS"
+    />
+    <meta name="author" content="Pedro Henrique" />
+    <title>LockPass - Um jogo diario de números</title>
+    <meta
+      name="application-name"
+      content="LockPass - Um jogo diario de números"
+    />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="LockPass - Um jogo diario de números"
+    />
+    <meta
+      name="description"
+      content="Descubra o código em 6 tentativas. Um novo código está disponível todos os dias!"
+    />
+
+    <!-- FB Meta Tags -->
+    <meta
+      property="og:site_name"
+      content="LockPass - Um jogo diario de números"
+    />
+    <meta property="og:url" content="https://www.lockpass.xyz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LockPass - Um jogo diario de números" />
+    <meta
+      property="og:description"
+      content="Descubra o código em 6 tentativas. Um novo código está disponível todos os dias!"
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/1Qf5zRg/Lock-Pass-Icon.jpg"
+    />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="LockPass" />
+    <meta property="twitter:domain" content="lockpass.xyz" />
+
+    <meta name="theme-color" content="#791579" />
+    <link rel="manifest" href="assets/manifest.json" />
+    <link
+      href="assets/images/LockPassIcon.webp"
+      rel="icon shortcut"
+      sizes="192192"
+    />
+    <link href="assets/images/LockPassIcon.webp" rel="apple-touch-icon" />
+
+    <!-- Google Bots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="all" />
+    <link rel="canonical" href="https://www.lockpass.xyz" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q882DXP8VQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Q882DXP8VQ");
+    </script>
+
+    <style>
+      body {
+    background-color: #1A1A1A;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.a-btn {
+    text-decoration: none;
+}
+
+.a-btn:hover {
+    text-decoration: none;
+}
+
+.a-link {
+    color: #c00fc0;
+    text-decoration: none;
+}
+
+.a-link:hover {
+    text-decoration: underline;
+}
+
+button {
+    position: relative;
+    height: 50px;
+    width: 250px;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    cursor: pointer;
+    border: 1px solid #c00fc0;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border: 1px solid #c00fc0;
+    top: -4px;
+    left: 245px;
+    transition: 1s all;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border: 1px solid #c00fc0;
+    bottom: -4px;
+    left: -4px;
+    transition: 1s all;
+}
+
+
+button:hover::after {
+    text-decoration: none;
+    animation: anime 1.5s infinite alternate;
+    left: 245px;
+}
+
+button:hover::before {
+    animation: anime 1.5s infinite alternate;
+    left: -4px;
+
+}
+
+@keyframes anime {
+    from {
+        transform: scale(1);
+        border-color: #c00fc0;
+    }
+
+    to {
+        transform: scale(1.5);
+        border-color: #791579;
+    }
+}
+
+#footer-socials {
+    justify-content: center;
+    color: gray;
+    display: block;
+    font-size: 16px;
+    padding: 0 4px;
+    vertical-align: top;
+}
+
+#footer-socials .fab {
+    min-width: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#footer-socials a:hover {
+    color: gray !important;
+}
+
+#footer-socials a:hover>.fa-discord {
+    color: #7289da;
+}
+
+#footer-socials a:hover>.fa-facebook {
+    color: #4267b2;
+}
+
+#footer-socials a:hover>.fa-instagram {
+    color: #C13584;
+}
+
+#footer-socials a:hover>.fa-tiktok {
+    color: #ff0050;
+}
+
+#footer-socials a:hover>.fa-twitter {
+    color: #1da1f2;
+}
+
+.footer {
+    background-position: center;
+    background-size: cover;
+    border-color: #333;
+    color: #fff;
+    margin: 0 !important;
+    padding: 0px 10;
+    user-select: none;
+}
+
+.footer a {
+    color: gray !important;
+    text-decoration: none !important;
+    transition: 0.12s ease-in-out;
+}
+
+.footer a,
+.footer span {
+    vertical-align: middle;
+}
+
+.footer a:hover,
+.toolbar .btn-default {
+    color: #fff !important;
+}
+
+.footer ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.footer-copyright {
+    color: gray;
+    display: block;
+    padding: 0 4px;
+}
+
+.footer-image-cc {
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    display: inline-block;
+    height: 32px;
+    outline: 2px solid #061928;
+    position: relative;
+    transition: transform 200ms ease-out;
+    width: 44px;
+    z-index: 0;
+}
+
+.footer-image-cc:hover {
+    box-shadow: 0 2px 15px var(--box-shadow-color);
+    transform: scale(120%);
+    z-index: 1;
+}
+
+.footer-image-cc.paypal {
+    background-image: url(https://i.ibb.co/6XVtXZy/paypal.webp);
+}
+
+.footer-image-cc.picpay {
+    background-image: url(https://i.ibb.co/0Vs33Xb/picpay.webp);
+}
+
+.footer-image-cc.cartao {
+    background-image: url(https://i.ibb.co/2PR1jJt/cartao.webp);
+}
+
+.footer-image-cc.pix {
+    background-image: url(https://i.ibb.co/tPHJjXm/pix.webp);
+}
+
+.footer-image-cc.boleto {
+    background-image: url(https://i.ibb.co/2SryPX2/boletobancario.webp);
+}
+
+.footer-image-cc.mercadopago {
+    background-image: url(https://i.ibb.co/C2ZCtZr/mercadopago.webp);
+}
+
+.footer-images svg {
+    height: 32px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1160px;
+    padding: 0 !important;
+    width: 65% !important;
+}
+
+.footer.tebex {
+    background: #061928 !important;
+    margin-top: 30px !important;
+    padding: 30px 0;
+}
+
+.footer.tebex #footer-company {
+    align-self: center;
+}
+
+.footer.tebex .dropdown-menu {
+    background-color: #030e17 !important;
+    border-color: #010406 !important;
+    bottom: 30px;
+    flex-direction: column-reverse;
+    font-size: 15px;
+    left: 4px !important;
+    min-width: revert;
+    position: absolute;
+    top: revert;
+}
+
+.footer.tebex .dropdown-menu>li.active>a {
+    background-color: #092439 !important;
+}
+
+.footer.tebex .dropdown-menu>li.active:hover>a,
+.footer.tebex .dropdown-menu>li:hover>a {
+    background-color: #0e395b !important;
+}
+
+.footer.tebex .dropdown-menu a {
+    padding: 4px 8px;
+}
+
+.footer.tebex .footer-images {
+    padding: 4px 10px;
+}
+
+.footer.tebex .footer-images img {
+    filter: contrast(0) brightness(10);
+    max-width: 150px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.footer.tebex .footer-inner {
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.footer.tebex .footer-inner-child {
+    display: flex;
+    flex-direction: row;
+    row-gap: 15px;
+}
+
+.footer.tebex .open .dropdown-menu {
+    animation: currency-slide 100ms ease-in-out;
+}
+
+.footer.tebex h1 {
+    color: #fff;
+    font-family: Neuton, Raleway, serif !important;
+    font-size: 18px;
+    font-weight: 100;
+    margin-top: 0;
+    padding: 4px 10px;
+    text-transform: uppercase;
+}
+
+.footer.tebex p {
+    color: #285276;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer.tebex .footer-images {
+        min-width: 310px;
+    }
+
+    .package {
+        flex-direction: column;
+    }
+
+    .toolbar {
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #checkout .checkout-actions,
+    .footer.tebex .footer-inner-child {
+        flex-direction: column;
+    }
+
+    #featured-image {
+        display: none;
+    }
+
+    #footer-company {
+        padding: 0 0 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-links {
+        max-height: 100%;
+        text-align: center;
+    }
+
+    #username .panel-body {
+        max-width: revert;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+
+    .footer #footer-payment-methods .footer-images,
+    .footer #footer-payment-methods p {
+        text-align: center;
+    }
+
+    .footer.tebex .dropdown-menu {
+        left: calc(50% - 26px) !important;
+    }
+
+    .header {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.footer-inner {
+    padding: 0;
+    width: 90%;
+}
+
+.footer .footer-links {
+    flex-direction: row !important;
+}
+
+.footer-links {
+    max-width: 100%;
+}
+
+.footer-inner {
+    padding: 0 5% !important;
+    width: 90% !important;
+}
+
+footer {
+    display: block;
+}
+
+.footer:before,
+.footer:after,
+.header .buttons .toolbar:before,
+.header .buttons .toolbar:after {
+    content: " ";
+    display: table;
+}
+
+.footer {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin: 15px 0 25px 0;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer .language {
+    float: left !important;
+    float: left;
+}
+
+.footer .language span {
+    margin-right: 5px;
+}
+
+.footer .branding {
+    float: right !important;
+    float: right;
+}
+
+#footer-company {
+    padding: 0 50px 0 0;
+}
+
+@media only screen and (max-width: 767px) {
+
+    #checkout .checkout-actions,
+    .footer.tebex .footer-inner-child {
+        flex-direction: column;
+    }
+
+    #featured-image {
+        display: none;
+    }
+
+    #footer-company {
+        padding: 0 0 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-links {
+        max-height: 100%;
+        text-align: center;
+    }
+
+    #username .panel-body {
+        max-width: revert;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+
+    .footer #footer-payment-methods .footer-images,
+    .footer #footer-payment-methods p {
+        text-align: center;
+    }
+
+    .footer.tebex .dropdown-menu {
+        left: calc(50% - 26px) !important;
+    }
+
+    .header {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.footer-copyright {
+    color: gray;
+    display: block;
+    padding: 0 4px;
+}
+
+#footer-logo {
+    max-height: 48px;
+}
+
+.svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em
+}
+
+.landing-content {
+    column-gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+.landing-content {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="header">
+          <div class="logo">
+            <a>
+              <img
+                src="assets/images/LogoLockPass.webp"
+                alt="LockPass Logo"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div class="body" id="home">
+        <div class="content landing-content">
+          <span style="text-align: center; font-size: 2.5em; color: white"
+            ><b style="font-size: 100%; color: white"
+              >Página não encontrada!</b
+            ></span
+          >
+          <span style="color: #dddcdc; text-align: center; font-size: 1em"
+            >A página solicitada não foi encontrada ou está fora de
+            funcionamento, verifique se o URL desejado foi inserido corretamente
+            e tente novamente. Caso o erro persista, reporte
+            <a
+              class="a-link"
+              href="https://github.com/PeterDBR27/Cruzadinhas/issues/new"
+              style="font-size: 1.1em"
+              target="_blank"
+              >aqui</a
+            >.</span
+          >
+          <center>
+            <button class="btn-principal" title="Página Principal">
+              <a
+                href="https://www.lockpass.xyz"
+                class="a-btn"
+                style="color: #c00fc0"
+                >Página Principal</a
+              >
+            </button>
+          </center>
+          <br />
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div id="footer-company">
+          <a
+            href="https://www.pedros.cf"
+            aria-label="Pedros CF"
+            aria-label="LockPass"
+          >
+            <center>
+              <img
+                id="footer-logo"
+                src="https://www.pedros.cf/assets/images/logo.webp"
+                aria-hidden="true"
+                alt="LockPass Logo"
+              />
+            </center>
+          </a>
+          <span class="footer-copyright"
+            >&copy <b style="color: #c00fc0">Pedros CF</b> 2022 - 2023, alguns
+            direitos reservados!</span
+          >
+          <center>
+            <span id="footer-socials">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://twitter.com/pedroh_xyz"
+                ><svg
+                  class="svg-inline--fa fa-twitter"
+                  aria-labelledby="svg-inline--fa-title-q4xp5pnPrJEP"
+                  data-prefix="fab"
+                  data-icon="twitter"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  data-fa-i2svg=""
+                >
+                  <title id="svg-inline--fa-title-q4xp5pnPrJEP">Twitter</title>
+                  <path
+                    fill="currentColor"
+                    d="M459.4 151.7c.325 4.548 .325 9.097 .325 13.65 0 138.7-105.6 298.6-298.6 298.6-59.45 0-114.7-17.22-161.1-47.11 8.447 .974 16.57 1.299 25.34 1.299 49.06 0 94.21-16.57 130.3-44.83-46.13-.975-84.79-31.19-98.11-72.77 6.498 .974 12.99 1.624 19.82 1.624 9.421 0 18.84-1.3 27.61-3.573-48.08-9.747-84.14-51.98-84.14-102.1v-1.299c13.97 7.797 30.21 12.67 47.43 13.32-28.26-18.84-46.78-51.01-46.78-87.39 0-19.49 5.197-37.36 14.29-52.95 51.65 63.67 129.3 105.3 216.4 109.8-1.624-7.797-2.599-15.92-2.599-24.04 0-57.83 46.78-104.9 104.9-104.9 30.21 0 57.5 12.67 76.67 33.14 23.72-4.548 46.46-13.32 66.6-25.34-7.798 24.37-24.37 44.83-46.13 57.83 21.12-2.273 41.58-8.122 60.43-16.24-14.29 20.79-32.16 39.31-52.63 54.25z"
+                  ></path></svg
+              ></a>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://instagram.com/pedroh.xyz"
+                ><svg
+                  class="svg-inline--fa fa-instagram"
+                  aria-labelledby="svg-inline--fa-title-vQbIi5tCYcmN"
+                  data-prefix="fab"
+                  data-icon="instagram"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  data-fa-i2svg=""
+                >
+                  <title id="svg-inline--fa-title-vQbIi5tCYcmN">
+                    Instagram
+                  </title>
+                  <path
+                    fill="currentColor"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  ></path></svg
+              ></a>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://tiktok.com/@pedroh_xyz"
+                ><svg
+                  class="svg-inline--fa fa-tiktok"
+                  aria-labelledby="svg-inline--fa-title-yVbuM2PYwV93"
+                  data-prefix="fab"
+                  data-icon="tiktok"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  data-fa-i2svg=""
+                >
+                  <title id="svg-inline--fa-title-yVbuM2PYwV93">TikTok</title>
+                  <path
+                    fill="currentColor"
+                    d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.25V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.2 121.2 0 0 0 1.86 22.17h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.14z"
+                  ></path></svg
+              ></a>
+            </span>
+          </center>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="popup-modal" tabindex="-1" role="dialog"></div>
+
+    <div id="waiting-overlay" style="display: none">
+      <svg
+        class="svg-inline--fa fa-gear fa-spin fa-3x"
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="gear"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        data-fa-i2svg=""
+      >
+        <path
+          fill="currentColor"
+          d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"
+        ></path>
+      </svg>
+    </div>
+
+    <script src="assets/js/smooth-scroll.js"></script>
+  </body>
+</html>

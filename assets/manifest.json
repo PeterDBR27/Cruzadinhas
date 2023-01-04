@@ -1,0 +1,21 @@
+{
+  "short_name": "Cruzadinhas",
+  "name": "Cruzadinhas",
+  "icons": [
+    {
+      "src": "/images/cruzadinhas-Icon.webp",
+      "type": "image/webp",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/summary1200x600.png",
+      "type": "image/png",
+      "sizes": "1200x630"
+    }
+  ],
+  "start_url": "https://www.cruzadinhas.xyz",
+  "background_color": "#141414",
+  "display": "standalone",
+  "theme_color": "#791579",
+  "description": "Descubra a cruzadinha diária!"
+}

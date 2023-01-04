@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2476428187308228"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <!-- AdSense -->
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    <meta
+      name="keywords"
+      content="cruzadinhas, cruzadinhas, cruzadinha jogo, cruzadinhas jogo, cruzadinha game, cruzadinhas game, CRUZADINHA, CRUZADINHAS"
+    />
+    <meta name="author" content="Pedro Henrique" />
+    <title>Cruzadinhas - Um jogo diário de letras</title>
+    <meta
+      name="application-name"
+      content="Cruzadinhas - Um jogo diário de letras"
+    />
+    <meta name="description" content="Descubra a cruzadinha diária!" />
+
+    <!-- FB Meta Tags -->
+    <meta
+      property="og:site_name"
+      content="Cruzadinhas - Um jogo diário de letras"
+    />
+    <meta property="og:url" content="https://www.cruzadinhas.xyz" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Cruzadinhas - Um jogo diário de letras"
+    />
+    <meta property="og:description" content="Descubra a cruzadinha diária!" />
+    <meta property="og:image" content="https://i.ibb.co/kqv704B/3813765.png" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/cruzadinhas-Icon.webp"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@pedroh_xyz" />
+    <meta name="twitter:creator" content="@pedroh_xyz" />
+    <meta
+      property="twitter:title"
+      content="Cruzadinhas - Um jogo diário de letras"
+    />
+    <meta name="twitter:description" content="Descubra a cruzadinha diária!" />
+    <meta name="twitter:image" content="https://i.ibb.co/kqv704B/3813765.png" />
+    <meta property="twitter:domain" content="cruzadinhas.xyz" />
+    <meta name="theme-color" content="#791579" />
+
+    <meta property="og:url" content="https://www.cruzadinhas.xyz/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cruzadinhas" />
+    <meta property="og:image" content="assets/images/summary1200x630.png" />
+    <meta property="og:description" content="Descubra a cruzadinha diária!" />
+
+    <link rel="apple-touch-icon" href="assets/images/cruzadinhas-Icon.webp" />
+    <link rel="manifest" href="assets/manifest.json" />
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-5RN4EPZPW0");
+    </script>
+    <script defer="defer" src="./assets/main.cr230m27.js"></script>
+    <link href="./assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <noscript>Você precisa ativar o JavaScript para jogar o LockPass!</noscript>
+    <div id="root"></div>
+  </body>
+
+  <body style="background: #fff; color: #000" data-hasqtip="0">
+    <script>
+      (function () {
+        // Defining the hash before the main bundle allows the bundle access window.hash
+        window.cruzadinha = window.cruzadinha || {};
+        window.cruzadinha.hash = "cr230m27";
+      })();
+    </script>
+    <script>
+      var returnedSuggestion = "";
+      let editor, doc, cursor, line, pos;
+      document.addEventListener("keydown", (event) => {
+        setTimeout(() => {
+          editor = event.target.closest(".CodeMirror");
+          if (editor) {
+            doc = editor.CodeMirror.getDoc();
+            cursor = doc.getCursor();
+            line = doc.getLine(cursor.line);
+            pos = { line: cursor.line, ch: line.length };
+            if (event.key == "Enter") {
+              var query = doc.getRange(
+                { line: Math.max(0, cursor.line - 10), ch: 0 },
+                { line: cursor.line, ch: 0 }
+              );
+              window.postMessage({
+                source: "getSuggestion",
+                payload: { data: query },
+              });
+              //displayGrey(query)
+            } else if (event.key == "ArrowRight") {
+              acceptTab(returnedSuggestion);
+            }
+          }
+        }, 0);
+      });
+
+      function acceptTab(text) {
+        if (suggestionDisplayed) {
+          doc.replaceRange(text, pos);
+          suggestionDisplayed = false;
+        }
+      }
+      function displayGrey(text) {
+        var element = document.createElement("span");
+        element.innerText = text;
+        element.style = "color:grey";
+        var lineIndex = pos.line;
+        editor
+          .getElementsByClassName("CodeMirror-line")
+          [lineIndex].appendChild(element);
+        suggestionDisplayed = true;
+      }
+      window.addEventListener("message", (event) => {
+        if (event.source !== window) return;
+        if (event.data.source == "return") {
+          returnedSuggestion = event.data.payload.data;
+          displayGrey(event.data.payload.data);
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="https://counter5.optistats.ovh/private/counter.js?c=hrmsn75h439a57ncb5hxtltrr39f7hrf&down=async"
+      async
+    ></script>
+    <noscript
+      ><a href="https://www.webcontadores.com" title="contador de visitantes"
+        ><img
+          src="https://counter5.optistats.ovh/private/webcontadores.php?c=hrmsn75h439a57ncb5hxtltrr39f7hrf"
+          border="0" /></a
+    ></noscript>
+    <div id="sfchrmsn75h439a57ncb5hxtltrr39f7hrf"></div>
+  </body>
+</html>
